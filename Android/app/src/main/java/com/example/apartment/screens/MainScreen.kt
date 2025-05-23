@@ -34,7 +34,6 @@ import androidx.compose.ui.Modifier
 import com.example.apartment.classes.BottomNavigationItem
 
 
-
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun MainScreen() {
@@ -78,6 +77,37 @@ fun MainScreen() {
 
     // Top bar notification indicator state
     var hasNotifications by remember { mutableStateOf(true) }
+   /* val sampleMessages = listOf(
+        ChatMessage(
+            id = "1",
+            text = "Hey! Are you still looking for an apartment?",
+            timestamp = "10:30 AM",
+            isFromMe = false
+        ),
+        ChatMessage(
+            id = "2",
+            text = "Yes, I'm still searching. Found anything good?",
+            timestamp = "10:32 AM",
+            isFromMe = true,
+            isRead = true
+        ),
+        ChatMessage(
+            id = "3",
+            text = "Actually yes! I found a great 2-bedroom place downtown. Want to see pics?",
+            timestamp = "10:35 AM",
+            isFromMe = false
+        ),
+        ChatMessage(
+            id = "4",
+            text = "Absolutely! Send them over.",
+            timestamp = "10:36 AM",
+            isFromMe = true,
+            isRead = false
+        )
+
+    )
+
+    */
 
     Scaffold(
         topBar = {
@@ -170,7 +200,7 @@ fun MainScreen() {
                 0 -> HomeScreen()
                 1 -> SearchScreen()
                 2 -> FavoritesScreen()
-                3 -> MessagesScreen()
+                3 -> MessagesScreen()//messages = sampleMessages
                 4 -> ProfileScreen()
             }
         }
